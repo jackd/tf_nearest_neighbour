@@ -15,9 +15,6 @@ if __name__ == '__main__':
             inp1 = tf.Variable(xyz1)
             inp2 = tf.constant(xyz2)
             dst1, idx1, dst2, idx2 = nn_distance(inp1, inp2)
-            print(dst1.shape)
-            print(dst2.shape)
-            exit()
             loss = tf.reduce_sum(dst1) + tf.reduce_sum(dst2)
             train = tf.train.GradientDescentOptimizer(
                 learning_rate=0.05).minimize(loss)

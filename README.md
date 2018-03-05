@@ -7,7 +7,7 @@ I had issues with the compile/python script provided so created this repo with t
 1. Clone this repository
 ```
 cd path/to/parent/dir
-git clone TODO
+git clone https://github.com/jackd/tf_nearest_neighbour.git
 ```
 2. Compile the operation
 ```
