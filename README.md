@@ -12,7 +12,6 @@ git clone https://github.com/jackd/tf_nearest_neighbour.git
 2. Compile the operation
 ```
 cd src
-chmod +x compile.sh
 ./compile.sh
 cd ..
 ```
