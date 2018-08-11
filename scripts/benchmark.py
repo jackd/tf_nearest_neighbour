@@ -1,8 +1,13 @@
+#!/usr/bin/python
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 import os
 import tensorflow as tf
 import numpy as np
 from scipy.spatial import cKDTree
-from nn_distance import nn_distance
+from tf_nearest_neighbour import nn_distance
 from time import time
 
 

@@ -22,7 +22,7 @@ export PYTHONPATH=path/to/parent/dir:$PYTHONPATH
 Consider adding this to your `.bashrc`.
 4. Test by running the example
 ```
-python example.py
+./scripts/example.py
 ```
 
 # If you installed Tensorflow from source

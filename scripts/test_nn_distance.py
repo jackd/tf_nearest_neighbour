@@ -1,3 +1,9 @@
+#!/usr/bin/python
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
+import os
 import unittest
 import numpy as np
 import tensorflow as tf
@@ -72,7 +78,5 @@ class TestNnDistance(unittest.TestCase):
         self._compare(xyz1, xyz2, expected)
 
 
-if __name__ == '__main__':
-    import os
-    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-    unittest.main()
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+unittest.main()
