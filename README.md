@@ -20,13 +20,21 @@ cd ..
 export PYTHONPATH=path/to/parent/dir:$PYTHONPATH
 ```
 Consider adding this to your `.bashrc`.
-4. Test by running the example
+4. Run the test script:
 ```
-./scripts/example.py
+./scripts//test_nn_distance.py
+```
+Your output should look something like
+```
+..
+----------------------------------------------------------------------
+Ran 2 tests in 1.391s
+
+OK
 ```
 
 # If you installed Tensorflow from source
-As the [adding an op](https://www.tensorflow.org/extend/adding_an_op) page states, if you use a `gcc` version `>= 5` you'll likely need to add `--cxxopt="-D_GLIBCXX_USE_CXX11_ABI=0"` as bazel command to compile the Python package.
+The compile script uses `D_GLIBCXX_USE_CXX11_ABI=0`. I'm no expert, but I believe this makes it compatible with the tensorflow package installed via `pip`. If you build tensorflow from source and are using a `gcc` version `>= 5`, you'll need to add `--cxxopt="-D_GLIBCXX_USE_CXX11_ABI=0"` to the bazel build command as per the instructions on the [adding an op page](https://www.tensorflow.org/extend/adding_an_op) when building tensorflow.
 
 # Alternatives
 The nearest neighbour is computed by taking the pair-wise distance between each point in each cloud. While this algorithm is trivial to implement, and this implementation is memory-efficient, it does not scale well to large point clouds. For clouds of size `N` and `M`, it scales like `O(N*M)`.
